@@ -1,0 +1,171 @@
+/* Global Enhancements */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Fix for unified sidebar scrolling START */
+aside.col-md-2 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y: auto; /* This allows the entire sidebar to scroll */
+}
+
+/* Make the sidebar-menu take up the space above the user profile */
+.sidebar-menu {
+    flex-grow: 1;
+}
+
+/* Position the user profile at the bottom of the scrollable area */
+.user {
+    margin-top: auto; /* Pushes the user profile to the bottom of the flex container */
+    position: relative;
+    padding: 1rem;
+    background-color: #343a40;
+    z-index: 10;
+}
+/* Fix for unified sidebar scrolling END */
+
+/* Clean Sidebar Styles */
+.bg-businesscom-grey { background-color: #343a40; }
+.sidebar-menu .card { margin-bottom: 4px; border: none; background-color: transparent; }
+.sidebar-menu .card .card-header { padding: 0; }
+.sidebar-menu .card a.nav-link { display: block; padding: 12px 20px; font-size: 1rem; font-weight: 500; text-decoration: none; color: #ced4da; border-radius: 0.25rem; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, padding-left 0.2s ease-in-out; }
+.sidebar-menu .card a.nav-link:hover { background-color: #495057; color: #ffffff; padding-left: 25px; }
+.sidebar-menu .card a.nav-link .fas,
+.sidebar-menu .card a.nav-link .far,
+.sidebar-menu .card a.nav-link .fab { margin-right: 10px; width: 20px; text-align: center; font-size: 0.95em; }
+.sidebar-menu .card a.nav-link.active-sidebar-link { background-color: #007bff; color: #ffffff; font-weight: 600; box-shadow: 0 2px 4px rgba(0, 123, 255, 0.25); }
+.sidebar-menu #accordion .card-body ul { padding-left: 20px; list-style: none; margin-bottom: 0; }
+.sidebar-menu #accordion .card-body ul li a { font-size: 0.9rem; padding: 10px 15px 10px 20px; display: block; border-radius: 0.25rem; color: #adb5bd; }
+.sidebar-menu #accordion .card-body ul li a:hover { background-color: #495057; color: #ffffff; padding-left: 25px; }
+.sidebar-logo img { max-width: 80%; height: auto; }
+.user-details .text-white { font-weight: 500; }
+.user-details .bg-businesscom-maroon { background-color: #6d2828; }
+
+/* Page Content Area */
+.main-view { background-color: #ffffff; border-radius: 0.375rem; box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075); }
+.page-content-wrapper { background-color: #fff; padding: 25px; border-radius: 8px; }
+.page-content-wrapper h1, .page-content-wrapper h2 { color: #343a40; margin-bottom: 1.5rem; }
+
+/* Delegation Page Specific Styles */
+.delegate-item { display: inline-flex; align-items: center; background-color: #e9ecef; padding: 0.3rem 0.6rem; margin: 0.2rem; border-radius: 0.25rem; font-size: 0.9em; }
+.delegate-item .remove-specific-delegate-btn { margin-left: 0.6rem; padding: 0.1rem 0.4rem; font-size: 0.8em; line-height: 1; }
+.delegates-list { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; } 
+#alertPlaceholder .alert { margin-top: 1rem; }
+
+/* People Page Specific Styles */
+.people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.5rem; }
+.person-card { border: 1px solid #dee2e6; border-radius: 0.375rem; padding: 1.5rem; text-align: center; background-color: #fff; box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075); transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
+.person-card:hover { transform: translateY(-5px); box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15); }
+.person-card .profile-image-container { width: 90px; height: 90px; border-radius: 50%; overflow: hidden; margin: 0 auto 1rem; background-color: #6c757d; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.2em; font-weight: 500; border: 3px solid #fff; box-shadow: 0 0 0 3px #adb5bd; }
+.person-card .profile-image-container img { width: 100%; height: 100%; object-fit: cover; }
+.person-card h5 { margin-bottom: 0.25rem; font-size: 1.2rem; color: #212529; }
+.person-card .person-email { font-size: 0.85rem; color: #007bff; margin-bottom: 0.25rem; word-break: break-all; }
+.person-card .person-phone { font-size: 0.85rem; color: #6c757d; }
+.select2-container .select2-selection--single { height: calc(1.5em + .75rem + 2px); } 
+.select2-container .select2-selection--multiple { min-height: calc(1.5em + .75rem + 2px); height: auto !important; }
+.select2-container .select2-selection--multiple .select2-search__field { margin-top: 0px; }
+
+/* Styles for Login Container */
+#loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e9ecef;
+}
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+}
+.login-logo img {
+    max-width: 200px;
+    margin-bottom: 1.5rem;
+}
+
+/* --- START: New Signature Page Styles --- */
+.editor-container, .preview-container {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+#signatureCode {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+.card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+.card-header {
+    background-color: #eee;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+.card-body {
+    padding: 15px;
+}
+#signaturePreview {
+    border: 1px dashed #ccc;
+    padding: 10px;
+    background-color: #fff;
+    min-height: 100px;
+}
+
+/* Styles for the new Signature List */
+#signaturesList .list-group-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+}
+#signaturesList .list-group-item:last-child {
+    border-bottom: none;
+}
+/* This is the container for the "Signature:" label and the buttons */
+.signature-actions-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+/* The container for the buttons only */
+.signature-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    justify-content: flex-end !important;
+    flex-wrap: wrap;
+}
+/* The signature HTML preview div */
+.signature-preview-content {
+    width: 100%;
+    border: 1px dashed #eee;
+    padding: 5px;
+}
+
+/* Responsive adjustments for medium screens and up */
+@media (min-width: 768px) {
+    .signature-actions-container {
+        flex-direction: row;
+    }
+}
+/* --- END: New Signature Page Styles --- */
